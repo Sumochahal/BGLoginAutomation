@@ -56,16 +56,11 @@ const insurerOption = page.locator('div[id^="react-select-3-option"]').getByText
 await insurerOption.waitFor({ state: 'visible' });
 await insurerOption.click();
 
-//  await page.locator('#react-select-3-input').click();
-// await page.locator('div[id^="react-select-3-option"]').getByText('HDFC Ergo General Insurance Company Ltd', { exact: true }).click();
-//   await page.getByText(/HDFC/i).click(); 
-//    await page.waitForTimeout(2000);
 
-// await page.locator(input[placeholder='Enter IDV']).click();
 const idvInput = page.locator("input[placeholder='Enter IDV']");
 await idvInput.click();     
-await idvInput.fill('29');    
-await page.waitForTimeout(30000);
+await idvInput.fill('29'); // fill any integers value   
+// await page.waitForTimeout(30000);
 
 const fileChooser = await page.setInputFiles("C:\\Users\\sumoc\\Downloads\\blank.pdf");
 
