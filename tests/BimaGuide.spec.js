@@ -8,10 +8,10 @@ test('click', async ({ page }) => {
   await page.locator('xpath=//button[@class="modal_btn"]').click();
 
   const otpInputs = page.locator('.otp_input_container input');
-  await otpInputs.nth(0).fill('4');
-  await otpInputs.nth(1).fill('5');
-  await otpInputs.nth(2).fill('6');
-  await otpInputs.nth(3).fill('7');
+  await otpInputs.nth(0).fill('0');
+  await otpInputs.nth(1).fill('0');
+  await otpInputs.nth(2).fill('0');
+  await otpInputs.nth(3).fill('0');
 
   await page.locator('.modal_btn.mt-3').click();
   await page.waitForTimeout(2000);
