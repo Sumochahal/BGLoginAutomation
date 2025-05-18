@@ -5,10 +5,10 @@ test('click', async ({ page }) => {
 await page.goto('http://partner-dev.bimaguide.com/');
 // await page.goto("http://partner-dashboard-dev.bimaguide.com/dashboard")
 
-// // Click login
+// Click login
 await page.getByText('Login').click();
 
-// // Fill contact 
+// Fill contact 
 await page.locator('#contactNumber').fill('8295147142');
 await page.locator('xpath=//button\[@class="modal\_btn"]').click();
 
@@ -18,13 +18,13 @@ for (let i = 0; i < 4; i++) {
 await otpInputs.nth(i).fill((i + 4).toString());
 }
 
-// // Submit OTP
+// Submit OTP
 await page.locator('.modal\_btn.mt-3').click();
 
-// // Wait for page content to load after login
+// Wait for page content to load after login
 await page.waitForLoadState('networkidle');
 
-// //  Wait for sidebar load
+//  Wait for sidebar load
 const sidebarButton = page.locator("button.sidenav\_btn span");
 await sidebarButton.waitFor({ state: 'visible', timeout: 10000 });
 await sidebarButton.click();
