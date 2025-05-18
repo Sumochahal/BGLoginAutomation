@@ -71,6 +71,7 @@ await page.waitForTimeout(3000);
 
 await page.locator("button\[type='submit']").click();
 await page.waitForTimeout(1000);
+// now we write code for Mapping policy
 
 });
 
