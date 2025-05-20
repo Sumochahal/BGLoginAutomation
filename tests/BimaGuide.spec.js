@@ -66,7 +66,7 @@ const fileChooser = await page.setInputFiles("C:\\Users\\sumoc\\Downloads\\blank
 
 await page.waitForTimeout(30000);
 
-await page.locator("button[type='submit']").click()
+// await page.locator("button[type='submit']").click()
 await page.waitForTimeout(10000);
 
 
