@@ -63,7 +63,6 @@ await page.waitForTimeout(4000);
 
 // Upload file
 const fileInput = page.locator("input[type='file']");
-// "C:\Users\sumoc\Downloads\blank.pdf"
 await fileInput.setInputFiles("C:\\Users\\sumoc\\Downloads\\blank.pdf");
 
 // Submit form
@@ -71,7 +70,7 @@ await page.waitForTimeout(3000);
 
 await page.locator("button\[type='submit']").click();
 await page.waitForTimeout(1000);
-// now we write code for Mapping policy
+
 
 });
 
